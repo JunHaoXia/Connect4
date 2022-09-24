@@ -1,0 +1,20 @@
+.player_board{
+    font-family: Arial, Helvetica, sans-serif;
+    color :black;
+    font-size: xx-large;
+}
+#gameArea {
+    border: 1px solid black;
+}
+.header1 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: xx-large;
+}
+.button{
+    background: transparent;
+    border: none;
+    outline: none;
+    height: 200px;
+    width: 200px;
+    cursor: pointer;
+}
