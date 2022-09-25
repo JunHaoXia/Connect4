@@ -1,15 +1,17 @@
-function Circle(x,y){
+function Circle(x,y,color){
     this.radius = 40;
     this.x = x;
     this.y = y;
     this.gravity = 5;
+    this.color = color;
+    this.column = (x-190)/90
     
     this.drawCircle = function(){
-        ctx.fillStyle = "red";
+        ctx.fillStyle = this.color;
         ctx.beginPath();
         ctx.arc(this.x,this.y,this.radius,0, 2*Math.PI);
         ctx.fill()
-        console.log("drew circle");
+        ctx.closePath()
     }
     this.step = function(){
         //vertical collision detection
@@ -20,6 +22,27 @@ function Circle(x,y){
             height: this.radius *2
         }
         //check for intersection
+        //*
+        // for(j = 0; j < game.gameState[this.column].length;j++){
+        //     if(game.gameState[this.column][j] != null){
+        //         let structureRect = {
+        //             x: game.gameState[this.column][j].x,
+        //             y: game.gameState[this.column][j].y,
+        //             height: game.gameState[this.column][j].radius*2,
+        //             width: game.gameState[this.column][j].radius*2
+        //         }
+        //         if(game.gameState[this.column][j] != this){
+        //             if(checkIntersection(verticalRect,structureRect)){
+        //                 while(checkIntersection(verticalRect,structureRect)){
+        //                     verticalRect.y -= Math.sign(this.gravity);
+        //                 }
+        //                 this.y = verticalRect.y;
+        //                 this.gravity = 0;
+        //             }
+        //         }
+        //     }
+        // }
+        //*
         for (let i = 0; i < circles.length; i++) {
             let structureRect = {
                 x: circles[i].x,
