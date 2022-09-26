@@ -1,0 +1,21 @@
+#gameArea {
+    border: 1px solid black;
+    height: 60vh;
+}
+.header1 {
+    font-family:'Times New Roman', Times, serif;
+    font-size: xx-large;
+    color: gold;
+}
+.button{
+    font-size: 16px;
+    cursor: default;
+    position:static;
+    top: 40px;
+    left: 360px;
+}
+.players{
+    font-family:'Times New Roman', Times, serif;
+    font-size: xx-large;
+    color: gold;
+}

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Connect Four Game</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="stylesheet" href="gamemodal.css">
+        <style>
+            body {
+                height: 100vh;
+                background-color: gray;
+                text-align: center;
+                overflow:hidden;
+            }
+        </style>
+        <script src="js/main.js"></script>
+        <script src="js/circle.js"></script>
+        <script src="js/game.js"></script>
+        <script src="js/connect4.js"></script>
+    </head>
+    <body>
+        <div class="header1">Connect Four Game</div>
+        <br>
+        <div class="button">
+            <input type="button" id="button1" value="↓"><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+            <input type="button" id="button2" value="↓"><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+            <input type="button" id="button3" value="↓"><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+            <input type="button" id="button4" value="↓"><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+            <input type="button" id="button5" value="↓"><span>&emsp;&emsp;&emsp;&emsp;&ensp;</span>
+            <input type="button" id="button6" value="↓"><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+            <input type="button" id="button7" value="↓"><span>&emsp;&emsp;&emsp;&emsp;&emsp;</span>
+        </div>
+        <div class="modal" id="game-won-modal" data-animation="slideInOutLeft">
+            <div class="modal-root" id='verify-won-root'>
+                <div class="modal-north">
+                    <span id="winner-color"></span> player won!
+                </div>                
+                <div class="modal-center">
+                    <div class="modal-center-content">
+                        Again?
+                    </div>
+                </div>
+                <div class="modal-south">
+                    <input type="button" id="won-again-button" class="modal-button" value='Confirm' />
+                </div>
+            </div>
+        </div>
+        <div class="modal" id="game-tie-modal" data-animation="slideInOutLeft">
+            <div class="modal-root" id='verify-tie-root'>
+                <div class="modal-north">
+                    No player won!
+                </div>                
+                <div class="modal-center">
+                    <div class="modal-center-content">
+                        Again?
+                    </div>
+                </div>
+                <div class="modal-south">
+                    <input type="button" id="tie-again-button" class="modal-button" value='Confirm' />
+                </div>
+            </div>
+        </div>
+        <br>
+        <canvas id="gameArea" width=920 height=500></canvas>
+        <br>
+        <div class="players"><span id="player-color"></span> turn</div>
+    </body>
+</html>
